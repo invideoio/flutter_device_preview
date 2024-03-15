@@ -1,9 +1,5 @@
-import 'dart:ui';
-
 import 'package:device_frame/device_frame.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 class FakeScreen extends StatelessWidget {
@@ -61,7 +57,7 @@ void main() {
               children: [
                 for (var orientation in [
                   if (device.canRotate) Orientation.portrait,
-                  Orientation.landscape
+                  Orientation.landscape,
                 ])
                   for (var isVirtualKeyboardEnabled in [false, true])
                     DeviceFrame(

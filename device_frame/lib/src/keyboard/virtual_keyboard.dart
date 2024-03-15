@@ -1,6 +1,5 @@
 import 'package:device_frame/device_frame.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 import 'button.dart';
 
@@ -9,7 +8,7 @@ import 'button.dart';
 /// When [isEnabled] is updated, a [transitionDuration] starts to display
 /// or hide the virtual keyboard.
 ///
-/// No interraction is available, its only purpose is to display
+/// No interaction is available, its only purpose is to display
 /// the visual and update media query's `viewInsets` for [child].
 class VirtualKeyboard extends StatelessWidget {
   /// Display a simulated on screen keyboard on top of the given [child] widget.
@@ -17,7 +16,7 @@ class VirtualKeyboard extends StatelessWidget {
   /// When [isEnabled] is updated, a [transitionDuration] starts to display
   /// or hide the virtual keyboard.
   ///
-  /// No interraction is available, its only purpose is to display
+  /// No interaction is available, its only purpose is to display
   /// the visual and update media query's `viewInsets` for [child].
   const VirtualKeyboard({
     Key? key,
@@ -85,16 +84,15 @@ class VirtualKeyboard extends StatelessWidget {
 class _VirtualKeyboard extends StatelessWidget {
   const _VirtualKeyboard({
     double? height,
-    this.spacing = 12,
   }) : height = height ?? minHeight;
 
   static const double minHeight = 214;
   final double height;
-  final double spacing;
+  static const spacing = 12.0;
 
   Widget _row(List<Widget> children) {
     return Padding(
-      padding: EdgeInsets.only(
+      padding: const EdgeInsets.only(
         top: spacing,
         left: spacing,
       ),
@@ -111,7 +109,7 @@ class _VirtualKeyboard extends StatelessWidget {
   ) {
     return letters
         .map<Widget>(
-          (x) => Expanded(
+          (x) => const Expanded(
             child: Padding(
               padding: EdgeInsets.only(
                 right: spacing,
@@ -178,7 +176,7 @@ class _VirtualKeyboard extends StatelessWidget {
               theme.button1BackgroundColor,
               theme.button1ForegroundColor,
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.only(
                 right: spacing,
               ),
@@ -194,7 +192,7 @@ class _VirtualKeyboard extends StatelessWidget {
           ]),
           _row(
             [
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(
                   right: spacing,
                 ),
@@ -209,7 +207,7 @@ class _VirtualKeyboard extends StatelessWidget {
                   backgroundColor: theme.button2BackgroundColor,
                 ),
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(
                   right: spacing,
                 ),
@@ -222,7 +220,7 @@ class _VirtualKeyboard extends StatelessWidget {
                   backgroundColor: theme.button2BackgroundColor,
                 ),
               ),
-              Expanded(
+              const Expanded(
                 child: Padding(
                   padding: EdgeInsets.only(
                     right: spacing,
@@ -239,7 +237,7 @@ class _VirtualKeyboard extends StatelessWidget {
                   ),
                 ),
               ),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.only(
                   right: spacing,
                 ),

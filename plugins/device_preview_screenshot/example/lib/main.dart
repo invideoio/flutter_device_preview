@@ -6,9 +6,9 @@ void main() {
     DevicePreview(
       enabled: true,
       builder: (context) => const MyApp(),
-      tools: [
+      tools: const [
         ...DevicePreview.defaultTools,
-        const DevicePreviewScreenshot(),
+        DevicePreviewScreenshot(),
       ],
     ),
   );
@@ -103,7 +103,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Text(
               '$_counter',
-              style: Theme.of(context).textTheme.headline4,
+              style: Theme.of(context).textTheme.headlineMedium,
             ),
           ],
         ),

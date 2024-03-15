@@ -18,9 +18,9 @@ extension ThemeToolbarExtension on DevicePreviewToolBarThemeData {
   ThemeData asThemeData() {
     switch (this) {
       case DevicePreviewToolBarThemeData.dark:
-        final base = ThemeData.dark();
+        final baseTheme = ThemeData.dark();
         const accentColor = Colors.white;
-        return base.copyWith(
+        return baseTheme.copyWith(
           colorScheme: const ColorScheme.dark(
             primary: accentColor,
             secondary: accentColor,
@@ -28,9 +28,8 @@ extension ThemeToolbarExtension on DevicePreviewToolBarThemeData {
           primaryColor: accentColor,
           primaryColorDark: accentColor,
           indicatorColor: accentColor,
-          toggleableActiveColor: accentColor,
           highlightColor: accentColor.withOpacity(0.1),
-          sliderTheme: base.sliderTheme.copyWith(
+          sliderTheme: baseTheme.sliderTheme.copyWith(
             thumbColor: accentColor,
             activeTrackColor: accentColor.withOpacity(0.7),
             inactiveTrackColor: accentColor.withOpacity(0.12),
@@ -40,10 +39,10 @@ extension ThemeToolbarExtension on DevicePreviewToolBarThemeData {
           ),
         );
       case DevicePreviewToolBarThemeData.light:
-        final base = ThemeData.light();
+        final baseTheme = ThemeData.light();
         const accentColor = Colors.black;
         const barColor = Color(0xFF303030);
-        return base.copyWith(
+        return baseTheme.copyWith(
           colorScheme: const ColorScheme.light(
             primary: accentColor,
             secondary: accentColor,
@@ -51,12 +50,11 @@ extension ThemeToolbarExtension on DevicePreviewToolBarThemeData {
           primaryColor: accentColor,
           primaryColorDark: accentColor,
           indicatorColor: accentColor,
-          toggleableActiveColor: accentColor,
           highlightColor: accentColor,
-          appBarTheme: base.appBarTheme.copyWith(
+          appBarTheme: baseTheme.appBarTheme.copyWith(
             color: barColor,
           ),
-          sliderTheme: base.sliderTheme.copyWith(
+          sliderTheme: baseTheme.sliderTheme.copyWith(
             thumbColor: accentColor,
             activeTrackColor: accentColor.withOpacity(0.7),
             inactiveTrackColor: accentColor.withOpacity(0.12),

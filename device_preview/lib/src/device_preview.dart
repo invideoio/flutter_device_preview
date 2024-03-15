@@ -14,7 +14,6 @@ import 'package:device_preview/src/views/tool_panel/sections/system.dart';
 import 'package:device_preview/src/views/tool_panel/tool_panel.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
 import 'dart:ui' as ui;
@@ -338,8 +337,8 @@ class DevicePreview extends StatefulWidget {
 
     return mediaQuery.copyWith(
       platformBrightness: isDarkMode ? Brightness.dark : Brightness.light,
-      textScaleFactor: textScaleFactor,
       boldText: boldText,
+      textScaler: TextScaler.linear(textScaleFactor),
       disableAnimations: disableAnimations,
       accessibleNavigation: accessibleNavigation,
       invertColors: invertColors,

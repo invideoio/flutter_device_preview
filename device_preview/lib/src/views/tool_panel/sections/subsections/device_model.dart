@@ -74,7 +74,7 @@ class _DeviceModelPickerState extends State<DeviceModelPicker>
             const Tab(
               icon: Icon(Icons.tune),
               text: 'Custom',
-            )
+            ),
           ],
         ),
       ),
@@ -172,7 +172,7 @@ class _TypeSectionHeader extends StatelessWidget {
           }
         }()
             .toUpperCase(),
-        style: theme.textTheme.subtitle2?.copyWith(
+        style: theme.textTheme.titleSmall?.copyWith(
           color: theme.hintColor,
         ),
       ),

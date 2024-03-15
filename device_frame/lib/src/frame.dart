@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 import 'info/device_type.dart';
 import 'info/info.dart';
@@ -28,7 +27,7 @@ class DeviceFrame extends StatelessWidget {
   /// device.
   ///
   /// It is cropped with the device screen shape and its size
-  /// is the [info]'s screensize.
+  /// is the [info]'s screen size.
   final Widget screen;
 
   /// All information related to the device.
